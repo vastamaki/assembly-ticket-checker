@@ -53,7 +53,7 @@ async function fetchTikettiData() {
     const salesStatus =
       result.selector_data[0].data.sections["239987"].sales_status;
 
-    if (salesStatus[0][3] !== "1" || salesStatus[0][5] !== "1") {
+    if (salesStatus[0][5] !== "1") {
       console.log("Tickets are on sale!");
 
       bot.telegram.sendMessage(TG_CHAT_ID!, "Tickets are on sale!");
